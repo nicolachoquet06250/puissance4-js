@@ -1,0 +1,16 @@
+{
+  "name": "puissence4-js",
+  "version": "1.0.0",
+  "description": "puissance 4 web et desktop à la fois",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"command not found\"",
+    "start": "node js/index.js"
+  },
+  "author": "nicolas < nicolachoquet06250@gmail.com >",
+  "license": "ISC",
+  "dependencies": {
+    "carlo": "^0.9.23",
+    "jquery": "^3.3.1"
+  }
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> Puissance 4 </title>
+</head>
+<body>
+
+<div id="countUp1" class="countUp">100</div>
+<script src="../../js/countUp.js/dist/countUp.js"></script>
+<script>
+    let endVal = document.querySelectorAll('.countUp')[0].innerHTML;
+    let duration = 6;
+    document.querySelectorAll('.countUp')[0].innerHTML = 0;
+    let numAnim = new CountUp('countUp1', 0, endVal, 0, duration);
+    numAnim.start(function() {
+        numAnim.update(endVal);
+    });
+</script>
+</body>
+</html>

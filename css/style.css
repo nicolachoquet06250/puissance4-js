@@ -1,0 +1,23 @@
+td {
+	background-color: #168655;
+	width: 75px;
+	height: 75px;
+	position: relative;
+	margin: 5px;
+	text-align: center;
+}
+
+.player {
+	border-radius: 50px;
+	width: 55px;
+	height: 55px;
+	display: inline-block;
+}
+
+.player1 {
+	background-color: red;
+}
+
+.player2 {
+	background-color: blue;
+}

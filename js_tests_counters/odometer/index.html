@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> Puissance 4 </title>
+    <link rel="stylesheet" href="../../js/odometer/themes/odometer-theme-default.css" />
+    <style>
+        .odometer {
+            font-size: 100px;
+        }
+        .d-block {
+            display:block !important;
+        }
+    </style>
+</head>
+<body>
+<div class="md-community-stats__item col-6 col-lg mb-4">
+    <p>
+        <i class="icon-user"></i>
+        <b class="d-block">
+            <span class="odometer odometer-theme-default" data-count="46"></span>
+        </b> utilisateurs
+    </p>
+</div>
+<div class="md-community-stats__item col-6 col-lg mb-4">
+    <p>
+        <i class="icon-users"></i>
+        <b class="d-block">
+            <span class="odometer odometer-theme-default" data-count="11"></span>
+        </b> communautés
+    </p>
+</div>
+<div class="md-community-stats__item col-6 col-lg mb-4">
+    <p>
+        <i class="icon-shield"></i>
+        <b class="d-block">
+           0
+        </b> animateurs
+    </p>
+</div>
+<div class="md-community-stats__item col-6 col-lg mb-4">
+    <p>
+        <i class="icon-topic"></i>
+        <b class="d-block">
+            0
+        </b> sujets
+    </p>
+</div>
+<div class="md-community-stats__item col-6 col-lg mb-4">
+    <p>
+        <i class="icon-message"></i>
+        <b class="d-block">
+            <span class="odometer odometer-theme-default" data-count="25959"></span>
+        </b> messages par jour
+    </p>
+</div>
+<script src="../../js/odometer/odometer.js"></script>
+<script>
+    window.onload = () => {
+
+        window.odometerOptions = {
+            auto: false, // Don't automatically initialize everything with class 'odometer'
+            selector: '.odometer', // Change the selector used to automatically find things to be animated
+            format: '(,ddd).dd', // Change how digit groups are formatted, and how many digits are shown after the decimal point
+            duration: 3000, // Change how long the javascript expects the CSS animation to take
+            animation: 'count' // Count is a simpler animation method which just increments the value,
+                               // use it when you're looking for something more subtle.
+        };
+
+        document.querySelectorAll('.odometer').forEach(el => {
+            let value_to_update = el.getAttribute('data-count');
+
+            let od = new Odometer({
+                el: el,
+
+                // Any option (other than auto and selector) can be passed in here
+                format: '',
+                theme: 'default'
+            });
+
+            od.update(value_to_update);
+        });
+    }
+</script>
+</body>
+</html>
